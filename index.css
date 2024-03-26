@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  width: 400px;
+  overflow: hidden;
+}
+
+.slider__track {
+  display: flex;
+  animation: scroll 5s linear infinite;
+}
+
+.slider__track:hover {
+  animation-play-state: paused;
+}
+
+.slider__item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 80px;
+  height: 80px;
+  border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
